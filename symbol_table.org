@@ -1,0 +1,181 @@
+* basic symbols
+** print
+   outputs contents
+   ',' after removes newline
+   ',' can be used to chain strings
+   '%' can be used to input groups of values
+   '%' (a, b) for multiple values
+** string formatters
+*** %d
+    digits
+*** %s
+    output strings for viewing
+*** %r
+    raw strings for debug
+** variables
+   used to store values, assign with '='
+** escape characters
+   '\' used to escape characters
+   \n for newline
+   \t for tab
+   \v for vertical tab
+** multiline strings
+   ''' or """
+   allows multiple lines within a string
+** input
+   raw_input() takes in keyboard input
+   raw_input(str) prompts with a string and then reads
+** from sys import argv
+   argv is list of input arguments
+   can unpack by comma-separated sequence of variables
+** import
+   loads modules from pacakges
+   'from' limits to specific functions
+   'module' = 'library' = 'file'
+   'package' = 'directory'
+*** from X import *
+    import all functions and no longer need to indicate X as source with dot notation
+    e.g. X.Y -> Y
+** file manipulation
+*** open()
+    opens file to use
+    'w' allows writing (defaults to overwrite)
+    'a' for appending
+    'r' for reading only; default option if none is specified
+    'w+' allows read and write to file
+    'b' added for binary files
+*** read()
+    read all contents of the file
+*** readline()
+    reads one line, indicated by presence of '\n'
+*** close()
+    close file and saves contents to disc
+*** truncate()
+    clears file contents
+*** write()
+    writes to file
+*** exists()
+    in os.path
+    tests for existence of file
+*** seek(idx)
+    moves to the _byte_ position given by idx
+    used to navigate files
+** functions
+*** form
+    def name(arguments):
+*** argument types
+    *args - gets list
+    arg1, arg2 - gets individual named arguments
+*** values
+    'return' gives out a value
+    values can be used by other variables, functions, etc.
+* symbol sets
+** keywords
+   + del - remove item from list given an index (or index range); remove an item
+   + from - used to import specific variable/class/function from a module to not need reference to module name
+   + as - used to rename imported module
+   + and
+   + not
+   + while
+   + elif
+   + global - access variables defined outside of a function
+   + or
+   + with - used to simplify cases where setup and take-down occurs
+     define a class with __enter__ method that returns result and __exit__ method (always executed) to clean up
+     __exit__ may respond to errors
+     http://effbot.org/zone/python-with-statement.htm
+     example: 
+     with open("x.txt") as f:
+         open = f.read()
+         do something with data
+   + assert - test for a condition to hold, throws AssertionError, may print message as well
+     + check paramter type, class, or value
+     + check data structure invariants
+     + check "can't happen" states
+     + after calling a function to ensure return is reasonable
+   + else
+   + if
+   + pass - do nothing
+   + yield - used to exit a generator and return a value
+   + break - step up out of smallest enclosing loop
+   + except - catch exception and execute code
+   + import
+   + print
+   + class - define group of related functions to execute on objects
+   + exec - execute python code dynamically; takes input string or file
+     evaluates a _statement_: e.g. print, if ~
+     no effect when given a value (e.g. exec '5' does nothing)
+   + eval - dynamic evaluation of expressions
+     evaluates and returns value from an _expression_: e.g. '5', '%d +6' % x
+     error if given a statement (e.g. eval('print 5'))
+   + compile - returns a code object for a given statement or expression to be used by either exec or eval
+   + in
+   + raise - create a user-defined exception
+   + continue - interrupt loop cycle and move to next iteration
+   + finally - always executed, used for cleanup
+   + is - test for object type
+   + return
+   + def
+   + for
+   + lambda - creates anonymous function
+   + try - define exception handler
+** string escape sequences
+   + \\
+   + \'
+   + \"
+   + \a
+   + \b
+   + \f
+   + \n
+   + \r
+   + \t
+   + \v
+** string formats
+   + %d
+   + %i
+   + %o
+   + %u
+   + %x
+   + %X
+   + %e
+   + %E
+   + %f
+   + %F
+   + %g
+   + %G
+   + %c
+   + %r
+   + %s
+   + %%
+** operators
+   + +
+   + -
+   + *
+   + **
+   + /
+   + // - floor division
+   + % - remainder
+   + <
+   + >
+   + <=
+   + >=
+   + ==
+   + !=
+   + <>
+   + ()
+   + []
+   + {}
+   + @ - used to apply decorators; decorators serve to add functionality to existing functions without being implemented separately
+   + ,
+   + :
+   + .
+   + =
+   + ;
+   + +=
+   + -=
+   + *=
+   + /=
+   + //=
+   + %=
+   + **=
+** 
